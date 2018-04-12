@@ -1,0 +1,210 @@
+{
+  "generator-cedrus-api": {
+    "haveConfigFile": true,
+    "discover": {
+      "ask": false,
+      "apiConsumes": [
+        "application/json"
+      ],
+      "apiProduces": [
+        "application/json"
+      ]
+    },
+    "detail": {
+      "ask": false,
+      "isPublic": true,
+      "httpMethods": [
+        "put"
+      ],
+      "httpStatusCodes": [
+        "204",
+        "404",
+        "500"
+      ],
+      "versioning": {
+        "enabled": true,
+        "type": "uri",
+        "versionNumber": [
+          "v1"
+        ],
+        "uriOrder": "resourceFirst",
+        "contentTypeOrder": "applicationFirst",
+        "customHeaderName": "version"
+      },
+      "apiData": {
+        "returnDataType": "No"
+      },
+      "records": {
+        "limit": 10
+      },
+      "cache": {
+        "RedisEnable": false,
+        "RedisHost": "pub-redis-19334.dal-05.1.sl.garantiadata.com",
+        "RedisPort": "19334",
+        "RedisPassword": "zKvyYzznhsdvYwgq",
+        "RedisExpire": 180
+      },
+      "pagination": {
+        "PaginationEnable": true
+      },
+      "filter": {
+        "FilterEnable": false
+      },
+      "security": {
+        "enabled": true,
+        "type": "basic"
+      },
+      "logging": {
+        "enabled": false
+      }
+    },
+    "deploy": {
+      "ask": false,
+      "apiApplicationType": "nodejs",
+      "openWhisk": {
+        "OpenWhiskEnable": false
+      },
+      "tls": {
+        "TLSEnable": false
+      },
+      "cloudFoundry": {
+        "appName": "",
+        "appMemory": ""
+      },
+      "javaOptions": {
+        "basePackage": "io.cedrus.apigen",
+        "packagingType": "jar",
+        "framework": [
+          "jaxrs",
+          "jaxrs"
+        ],
+        "springBootDeployment": "tomcat"
+      }
+    },
+    "multipleResources": {
+      "enabled": true,
+      "resources": [
+        {
+          "resourceName": "adf",
+          "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"adf\":{\"type\":\"string\",\"format\":\"\"}},\"required\":[\"adf\"]}",
+          "isPublic": true,
+          "httpMethods": [
+            "put"
+          ],
+          "httpStatusCodes": [
+            "204",
+            "404",
+            "500"
+          ],
+          "requireTestDataType": "Test Data",
+          "apiFakerMappingFileProvided": true,
+          "apiFakeMappingFileType": "object",
+          "apiFakerMappingFileLocation": {
+            "type": "object",
+            "properties": {
+              "adf": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "adf"
+            ]
+          },
+          "apiFakerMappingJsonType": "Data Schema",
+          "recordsLimit": "5",
+          "requireQuery": false,
+          "whichParameter": null,
+          "queryParameters": {
+            "put": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R1"
+              }
+            ]
+          },
+          "fake_data": []
+        }
+      ],
+      "testingMode": false
+    },
+    "javaOptions": {
+      "basePackage": "io.cedrus.apigen",
+      "packagingType": "jar",
+      "framework": [
+        "jaxrs",
+        "jaxrs"
+      ],
+      "springBootDeployment": "tomcat"
+    },
+    "apiOverview": {
+      "apiName": "asdfgks",
+      "apiBasePath": "/api",
+      "apiDescription": "fda"
+    },
+    "dataInput": {
+      "dataInputType": "JSON Input"
+    },
+    "JSONExtraction": [
+      {
+        "resourceName": "adf",
+        "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"adf\":{\"type\":\"string\",\"format\":\"\"}},\"required\":[\"adf\"]}",
+        "isPublic": true,
+        "httpMethods": [
+          "put"
+        ],
+        "httpStatusCodes": [
+          "204",
+          "404",
+          "500"
+        ],
+        "requireTestDataType": "Test Data",
+        "apiFakerMappingFileProvided": true,
+        "apiFakeMappingFileType": "object",
+        "apiFakerMappingFileLocation": {
+          "type": "object",
+          "properties": {
+            "adf": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "adf"
+          ]
+        },
+        "apiFakerMappingJsonType": "Data Schema",
+        "recordsLimit": "5",
+        "requireQuery": false,
+        "whichParameter": null,
+        "queryParameters": {
+          "put": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R1"
+            }
+          ]
+        },
+        "fake_data": [],
+        "jsonSchema": {
+          "type": "object",
+          "properties": {
+            "adf": {
+              "type": "string",
+              "format": ""
+            }
+          },
+          "required": [
+            "adf"
+          ]
+        }
+      }
+    ]
+  }
+}
