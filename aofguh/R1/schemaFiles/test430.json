@@ -1,0 +1,1 @@
+{"type":"object","properties":{"first attribute":{"type":"array","items":{"type":"integer","format":"int32"}},"second attribute":{"type":"string","format":""}},"required":["first attribute","second attribute"]}

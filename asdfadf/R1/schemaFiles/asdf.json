@@ -1,0 +1,1 @@
+{"type":"object","properties":{"asdf":{"type":"number","format":"float"}},"required":["asdf"]}
