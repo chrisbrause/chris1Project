@@ -1,0 +1,1 @@
+{"type":"object","properties":{"testmayfour":{"type":"string","format":""},"testmayfouragain":{"type":"array","items":{"type":"string","format":""}}},"required":["testmayfour","testmayfouragain"]}
